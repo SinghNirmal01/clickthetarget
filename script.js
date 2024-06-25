@@ -29,12 +29,20 @@ target.style.top = `${Math.random() * (gameArea.clientHeight - target.clientHeig
 function updateScore() {
   
     score++;
+    
+    
+    let randomColor = `rgb( ${Math.random()*265} , ${Math.random()*265} , ${Math.random()*265} )`
+  console.log(randomColor)
+  
     dx = Math.random() * 8 - 4; 
     dy = Math.random() * 8 - 4; 
     
     
   target.style.left = `${Math.random() * (gameArea.clientWidth - target.clientWidth)}px`;
   target.style.top = `${Math.random() * (gameArea.clientHeight - target.clientHeight)}px`;
+  
+  
+  target.style.backgroundColor = randomColor
   
   
   

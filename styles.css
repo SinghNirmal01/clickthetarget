@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+   
 
    
 }
@@ -26,7 +26,7 @@ body {
     position: relative;
     width: 95%;
     height: 80%;
-    background-color: #ffffff;
+    background-color: #4E4E4E;
     border: 2px solid #000000;
     margin-bottom: 20px;
 }
@@ -63,9 +63,9 @@ p {
 
 
 .container {
-  width: 90%;
+   width: 90%;
+  margin: auto;
 
-   margin-top: 50%;
    text-align: center;
  
    
@@ -73,8 +73,10 @@ p {
 
 
 .container h1 {
+  position: relative;
   color: #B1B5D7;
     font-size: 2rem;
+    margin-top: 0%;
  
 }
 
@@ -103,12 +105,35 @@ p {
     background-color: #bbb;
 }
 
-
+#rules{
+  width:90%;
+  background: #2C2E49;
+  color: #6CE45F;
+  border-radius: 10px;
+  border:5px solid #35DC56;
+  margin-top: 10%;
+  padding:5%;
+}
+#rules h4{
+  color:#A6E45F;
+}
+.rule{
+  animation:scale 1s linear infinite;
+}
 @keyframes bounce{
   0%{
     transform: scale(1);
   }
   50%{
     transform: scale(1.2)
+  }
+}
+
+@keyframes scale{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.9);
   }
 }

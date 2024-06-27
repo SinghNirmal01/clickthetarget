@@ -11,7 +11,7 @@ const gameOverText = document.getElementById('gameOver');
 
 const start = document.getElementById('start')
 const restart = document.getElementById('restart')
-
+const gameContinue = document.getElementById('continue')
 
 const gameCont = document.getElementById('game-container')
 const mainMenu = document.getElementById('start-container')
@@ -142,6 +142,15 @@ restart.addEventListener('click',(e)=>{
   target.style.display = 'block'
   gameOver = false
   score = 0
+  startScore.innerText = score
+  endScore.innerText = score
+})
+
+gameContinue.addEventListener('click',(e)=>{
+  endCont.style.display = 'none'
+  gameCont.style.display = 'flex'
+  target.style.display = 'block'
+  gameOver = false
   startScore.innerText = score
   endScore.innerText = score
 })

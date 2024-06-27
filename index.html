@@ -9,14 +9,22 @@
 <body>
   
   
- <div class="container" id="container">
+ <div class="container" id="start-container">
+   
+   
    <h1>Tap The Target</h1>
    
-   <div class="start-button-container">
-     <div class="start-button" id="start">START</div>
-   </div>
+ <div class="start-button-container">
+   <div class="btn" id="start">START</div>
+ </div>
+   
+   
    <div id="rules">
+     
+     
      <h4>Game Rules</h4>
+     
+     
       <div class="rule">
         If You Click Outside The Circle You Out.
       </div>
@@ -24,16 +32,43 @@
         Try To Get Maximum Score.
       </div>
    </div>
+   
+   
  </div> 
   
-  <div id="game-container">
-    <h1>Tap The Target</h1>
+  <div class="container" id="game-container">
+    
+    
+             <h1>Tap The Target</h1>
+    
+    
     <div id="gameArea">
         <div id="target"></div>
     </div>
-    <p>Score: <span id="score">0</span></p>
-    <p id="gameOver" style="display: none;">Game Over!</p>
-    </div>
+    
+    
+     <p id="p-score">Score: 
+        <span class="score" id="score">0</span>
+     </p>
+     
+  </div>
+<!--         <p id="gameOver" style="display: none;">Game Over!</p> -->
+
+<div class="container" id="end-container">
+  
+  
+       <p id="gameOver">Game Over</p>
+   
+   
+       <p class="score" id="end-score">Score:0</p>
+      
+        
+   <div id="btn-container">
+       <div class="btn-e" id="restart"><p>RESTART</p></div>
+       <div class="btn-e" id="continue"><p>CONTINUE</p></div>
+   </div>
+   
+</div>
     <script src="script.js"></script>
 </body>
 </html>

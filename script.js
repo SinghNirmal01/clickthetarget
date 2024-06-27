@@ -7,11 +7,19 @@ let gameOver = false;
 const target = document.getElementById('target');
 const gameArea = document.getElementById('gameArea');
 const gameOverText = document.getElementById('gameOver');
+
+
 const start = document.getElementById('start')
+const restart = document.getElementById('restart')
+
+
 const gameCont = document.getElementById('game-container')
-const mainMenu = document.getElementById('container')
+const mainMenu = document.getElementById('start-container')
+const endCont = document.getElementById('end-container')
 
 
+const startScore = document.getElementById('score')
+const endScore = document.getElementById('end-score')
 
 
 let dx = Math.random()*8-4; 
@@ -32,7 +40,6 @@ function updateScore() {
     
     
     let randomColor = `rgb( ${Math.random()*265} , ${Math.random()*265} , ${Math.random()*265} )`
-  console.log(randomColor)
   
     dx = Math.random() * 8 - 4; 
     dy = Math.random() * 8 - 4; 
@@ -47,7 +54,7 @@ function updateScore() {
   
   
 
-    document.getElementById('score').innerText = score;
+  startScore.innerText = score;
     
 }
 
@@ -87,9 +94,12 @@ function moveTarget() {
 
 
 function endGame() {
-    gameOver = true;
+  endCont.style.display = 'flex'
+  gameCont.style.display = 'none'
+    gameOver = true; 
     gameOverText.style.display = 'block';
     target.style.display = 'none';
+    endScore.innerText = `Score: ${score}`;
 }
 
 
@@ -123,4 +133,15 @@ start.addEventListener('click',(e)=>{
   gameCont.style.display = 'flex'
   mainMenu.style.display = 'none'
   
+})
+
+
+restart.addEventListener('click',(e)=>{
+  endCont.style.display = 'none'
+  gameCont.style.display = 'flex'
+  target.style.display = 'block'
+  gameOver = false
+  score = 0
+  startScore.innerText = score
+  endScore.innerText = score
 })

@@ -7,16 +7,20 @@ let gameOver = false;
 const target = document.getElementById('target');
 const gameArea = document.getElementById('gameArea');
 const gameOverText = document.getElementById('gameOver');
+const adFrame = document.getElementById('ad-frame')
+
 
 
 const start = document.getElementById('start')
 const restart = document.getElementById('restart')
 const gameContinue = document.getElementById('continue')
+const closeBtn = document.getElementById('close-btn')
+
 
 const gameCont = document.getElementById('game-container')
 const mainMenu = document.getElementById('start-container')
 const endCont = document.getElementById('end-container')
-
+const adCont = document.getElementById('ad-container')
 
 const startScore = document.getElementById('score')
 const endScore = document.getElementById('end-score')
@@ -148,7 +152,17 @@ restart.addEventListener('click',(e)=>{
 
 gameContinue.addEventListener('click',(e)=>{
   endCont.style.display = 'none'
+  gameCont.style.display = 'none'
+  target.style.display = 'none'
+  
+  adCont.style.display = 'flex'
+  
+  
+})
+
+closeBtn.addEventListener('click',(e)=>{
   gameCont.style.display = 'flex'
+  adCont.style.display = 'none'
   target.style.display = 'block'
   gameOver = false
   startScore.innerText = score

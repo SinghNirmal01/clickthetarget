@@ -192,3 +192,19 @@ h1 {
 #end-container{
   display: none;
 }
+
+
+#ad-container{
+  display: none;
+  height:100dvh;
+}
+#ad-frame{
+  height: 90%;
+  border:5px solid #42445A;
+  border-radius: 25px;
+}
+#close-btn{
+  position: absolute;
+  right:7.5%;
+  top:5.5%;
+}

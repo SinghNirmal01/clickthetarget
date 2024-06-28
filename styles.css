@@ -199,12 +199,16 @@ h1 {
   height:100dvh;
 }
 #ad-frame{
+
+  width:100%;
+  min-width: 100px;
   height: 90%;
   border:5px solid #42445A;
   border-radius: 25px;
+  margin:auto;
 }
 #close-btn{
   position: absolute;
-  right:7.5%;
+  right:5%;
   top:5.5%;
 }

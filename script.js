@@ -156,6 +156,14 @@ gameContinue.addEventListener('click',(e)=>{
   target.style.display = 'none'
   
   adCont.style.display = 'flex'
+  adFrame.innerHTML = `<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-5742819658274735"
+     data-ad-slot="7588043807"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>`
   
   
 })

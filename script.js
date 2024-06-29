@@ -156,14 +156,18 @@ gameContinue.addEventListener('click',(e)=>{
   target.style.display = 'none'
   
   adCont.style.display = 'flex'
-  adFrame.innerHTML = `<amp-ad width="100vw" height="320"
-     type="adsense"
+  adFrame.innerHTML = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5742819658274735"
+     crossorigin="anonymous"></script>
+<!-- D1 -->
+<ins class="adsbygoogle"
+     style="display:block"
      data-ad-client="ca-pub-5742819658274735"
      data-ad-slot="7588043807"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>`
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>`
   
   
 })

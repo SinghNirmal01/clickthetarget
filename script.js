@@ -150,27 +150,42 @@ restart.addEventListener('click',(e)=>{
   endScore.innerText = score
 })
 
-gameContinue.addEventListener('click',(e)=>{
-  endCont.style.display = 'none'
-  gameCont.style.display = 'none'
-  target.style.display = 'none'
-  
-  adCont.style.display = 'flex'
-  adFrame.innerHTML = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5742819658274735"
-     crossorigin="anonymous"></script>
-<!-- D1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5742819658274735"
-     data-ad-slot="7588043807"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>`
-  
-  
-})
+gameContinue.addEventListener('click', (e) => {
+  endCont.style.display = 'none';
+  gameCont.style.display = 'none';
+  target.style.display = 'none';
+
+  adCont.style.display = 'flex';
+
+  // Clear existing content
+  adFrame.innerHTML = '';
+ // console.log('Cleared adFrame content');
+
+  // Create and append ad script
+  const adScript = document.createElement('script');
+  adScript.async = true;
+  adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5742819658274735';
+  adScript.crossOrigin = 'anonymous';
+  adFrame.appendChild(adScript);
+ // console.log('Added adScript to adFrame');
+
+  // Create and append ad ins element
+  const adIns = document.createElement('ins');
+  adIns.className = 'adsbygoogle';
+  adIns.style.display = 'block';
+  adIns.setAttribute('data-ad-client', 'ca-pub-5742819658274735');
+  adIns.setAttribute('data-ad-slot', '7588043807');
+  adIns.setAttribute('data-ad-format', 'auto');
+  adIns.setAttribute('data-full-width-responsive', 'true');
+  adFrame.appendChild(adIns);
+  //console.log('Added adIns to adFrame');
+
+  // Create and append ad script for pushing the ad
+  const adPushScript = document.createElement('script');
+  adPushScript.textContent = '(adsbygoogle = window.adsbygoogle || []).push({});';
+  adFrame.appendChild(adPushScript);
+  //console.log('Added adPushScript to adFrame');
+});
 
 closeBtn.addEventListener('click',(e)=>{
   gameCont.style.display = 'flex'

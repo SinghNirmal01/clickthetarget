@@ -192,9 +192,12 @@ h1 {
 #end-container{
   display: none;
 }
-
+#start-container{
+  display: flex;
+}
 
 #ad-container{
+  width:100dvw;
   display: none;
   height:100dvh;
 }

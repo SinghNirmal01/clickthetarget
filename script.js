@@ -8,6 +8,8 @@ const target = document.getElementById('target');
 const gameArea = document.getElementById('gameArea');
 const gameOverText = document.getElementById('gameOver');
 const adFrame = document.getElementById('ad-frame')
+const music = document.getElementById('background-music');
+
 
 
 
@@ -137,6 +139,15 @@ start.addEventListener('click',(e)=>{
   gameCont.style.display = 'flex'
   mainMenu.style.display = 'none'
   
+  music.play();
+
+  // Pause the music (if needed)
+  // music.pause();
+
+  // Adjust volume (0.0 to 1.0)
+  music.volume = 0.5;
+  
+  
 })
 
 
@@ -195,3 +206,7 @@ closeBtn.addEventListener('click',(e)=>{
   startScore.innerText = score
   endScore.innerText = score
 })
+
+
+
+

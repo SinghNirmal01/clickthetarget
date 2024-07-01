@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play TapTheTarget, the addictive online target tapping game. Test your speed and precision in this fun arcade game. Free to play!">
-    <meta name="keywords" content="tap the target game, online target tapping game, arcade web game, HTML5 target games, free online games">
-    
-      <meta name="author" content="Nirmal">
-      
-    <meta property="og:title" content="TapTheTarget - Free Online Target Tapping Game">
-    <meta property="og:description" content="Play TapTheTarget, the addictive online target tapping game. Test your speed and precision in this fun arcade game. Free to play!">
-    <meta property="og:url" content="https://tapthetarget.onrender.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="TapTheTarget">
-    
-    <meta name="google-site-verification" content="yfERXCzXp7K8bnzxL4Mnsef0_oSz6GnpWYExhhejBFs" />
-    
-    <title>TapTheTarget - Free Online Target Tapping Game</title>
-    <link rel="canonical" href="https://tapthetarget.onrender.com">
-    <link rel="stylesheet" href="styles.css">
-    
-     <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play TapTheTarget, the addictive online target tapping game. Test your speed and precision in this fun arcade game. Free to play!">
+  <meta name="keywords" content="tap the target game, online target tapping game, arcade web game, HTML5 target games, free online games">
+
+  <meta name="author" content="Nirmal">
+
+  <meta property="og:title" content="TapTheTarget - Free Online Target Tapping Game">
+  <meta property="og:description" content="Play TapTheTarget, the addictive online target tapping game. Test your speed and precision in this fun arcade game. Free to play!">
+  <meta property="og:url" content="https://tapthetarget.onrender.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TapTheTarget">
+
+  <meta name="google-site-verification" content="yfERXCzXp7K8bnzxL4Mnsef0_oSz6GnpWYExhhejBFs" />
+
+  <title>TapTheTarget - Free Online Target Tapping Game</title>
+  <link rel="canonical" href="https://tapthetarget.onrender.com">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
@@ -49,82 +50,90 @@
         "ratingCount": "256"
       }
     }
-    </script>
+  </script>
 </head>
 
 <body>
   <audio id="background-music" src="/bg-music.mp3" autoplay loop></audio>
-  
- <div class="container" id="start-container">
-   
-   
-   <h1>Tap The Target</h1>
-   
- <div class="start-button-container">
-   <div class="btn" id="start">START</div>
- </div>
-   
-   
-   <div id="rules">
-     
-     
-     <h3>Game Rules</h3>
-     
-     
-      <div class="rule">
-        If You Click Outside The Circle You Out.
-      </div>
-      <div class="rule">
-        Try To Get Maximum Score.
-      </div>
-   </div>
-   
-   
- </div> 
-  
-  <div class="container" id="game-container">
-    
-    
-             <h2>Tap The Target</h2>
-    
-    
-    <div id="gameArea">
-        <div id="target"></div>
+
+  <div class="container" id="start-container">
+
+
+    <h1>Tap The Target</h1>
+
+    <div class="start-button-container">
+      <div class="btn" id="start">START</div>
     </div>
-    
-    
-     <p id="p-score">Score: 
-        <span class="score" id="score">0</span>
-     </p>
-     
-  </div>
-<!--         <p id="gameOver" style="display: none;">Game Over!</p> -->
 
-<div class="container" id="end-container">
-  
-  
-       <p id="gameOver">Game Over</p>
-   
-   
-       <p class="score" id="end-score">Score:0</p>
-      
-        
-   <div id="btn-container">
-       <div class="btn-e" id="restart"><p>RESTART</p></div>
-       <div class="btn-e" id="continue"><p>CONTINUE</p></div>
-   </div>
-   
-</div>
 
-<div class="container" id="ad-container">
-    <div id="close-btn" style="transform:scale(0.5);">❌</div>
-  <div id="ad-frame">Ad Show Below
-  
+    <div id="rules">
+
+
+      <h3>Game Rules</h3>
+
+
+      <div class="rule">
+       • If You Click Outside The Circle You Out
+    </div>
+      <div class="rule">
+        • Try To Get Maximum Score 
+      </div>
+      <div class="rule">
+        • View More Details <a id="help" href="/help.html">Here</a> 
+      </div>
+    </div>
+
+
   </div>
 
-</div>
-  
+  <div class="container" id="game-container">
 
-    <script src="script.js"></script>
+
+    <h2>Tap The Target</h2>
+
+
+    <div id="gameArea">
+      <div id="target"></div>
+    </div>
+
+
+    <p id="p-score">Score:
+      <span class="score" id="score">0</span>
+    </p>
+
+  </div>
+  <!--         <p id="gameOver" style="display: none;">Game Over!</p> -->
+
+  <div class="container" id="end-container">
+
+
+    <p id="gameOver">Game Over</p>
+
+
+    <p class="score" id="end-score">Score:0</p>
+
+
+    <div id="btn-container">
+      <div class="btn-e" id="restart">
+        <p>RESTART</p>
+      </div>
+      <div class="btn-e" id="continue">
+        <p>CONTINUE</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container" id="ad-container">
+
+    <div id="ad-frame">Ad Show Below
+    <div id="close-btn" style="transform:scale(0.5); display:none;">❌</div>
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>

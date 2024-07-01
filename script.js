@@ -1,3 +1,12 @@
+
+var configScript, invokeScript;
+
+
+
+
+
+
+
 let score = 0;
 let gameOver = false;
 
@@ -169,11 +178,39 @@ gameContinue.addEventListener('click', (e) => {
   adCont.style.display = 'flex';
 
   // Clear existing content
-  adFrame.innerHTML = '';
- // console.log('Cleared adFrame content');
+  var atOptions = {
+            'key': '48e3f6185107a84e120777437e715440',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
+        };
 
-  // Create and append ad script
-  const adScript = document.createElement('script');
+        // Create the first script element
+        var configScript = document.createElement('script');
+        configScript.type = 'text/javascript';
+        configScript.innerHTML = `
+            var atOptions = ${JSON.stringify(atOptions)};
+        `;
+
+        // Create the second script element
+        var invokeScript = document.createElement('script');
+        invokeScript.type = 'text/javascript';
+        invokeScript.src = '//www.topcreativeformat.com/48e3f6185107a84e120777437e715440/invoke.js';
+
+  
+  
+        // Append the scripts to the ad container
+       
+        adFrame.appendChild(configScript);
+        adFrame.appendChild(invokeScript);
+        
+        
+        setInterval(()=>{
+          closeBtn.style.display = 'block'
+        },2000)
+
+  /*const adScript = document.createElement('script');
   adScript.async = true;
   adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5742819658274735';
   adScript.crossOrigin = 'anonymous';
@@ -194,7 +231,7 @@ gameContinue.addEventListener('click', (e) => {
   // Create and append ad script for pushing the ad
   const adPushScript = document.createElement('script');
   adPushScript.textContent = '(adsbygoogle = window.adsbygoogle || []).push({});';
-  adFrame.appendChild(adPushScript);
+  adFrame.appendChild(adPushScript);*/
   //console.log('Added adPushScript to adFrame');
 });
 
@@ -205,6 +242,9 @@ closeBtn.addEventListener('click',(e)=>{
   gameOver = false
   startScore.innerText = score
   endScore.innerText = score
+  adFrame.removeChild(invokeScript)
+  adFrame.removeChild(configScript)
+  closeBtn.style.display = 'none'
 })
 
 

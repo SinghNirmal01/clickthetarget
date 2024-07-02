@@ -10,7 +10,7 @@ const music = document.getElementById('background-music');
 const start = document.getElementById('start');
 const restart = document.getElementById('restart');
 const gameContinue = document.getElementById('continue');
-const closeBtn = document.getElementById('close-btn');
+
 
 const gameCont = document.getElementById('game-container');
 const mainMenu = document.getElementById('start-container');
@@ -108,6 +108,27 @@ restart.addEventListener('click', (e) => {
 });
 
 gameContinue.addEventListener('click', (e) => {
+  
+  // Create the div element
+const closeBtn = document.createElement('div');
+
+// Set the id attribute
+closeBtn.id = 'close-btn';
+
+// Set the inline styles
+closeBtn.style.transform = 'scale(0.5)';
+closeBtn.style.display = 'none';
+
+// Set the inner content
+closeBtn.innerHTML = '❌';
+
+// Append the element to the body or any other parent element
+adFrame.appendChild(closeBtn);
+
+
+
+
+
     endCont.style.display = 'none';
     gameCont.style.display = 'none';
     target.style.display = 'none';
@@ -137,17 +158,20 @@ gameContinue.addEventListener('click', (e) => {
 
     adFrame.appendChild(configScript);
     adFrame.appendChild(invokeScript);
-
+      
+      
+      
+      
+    closeBtn.addEventListener('click', (e) => {
+      gameCont.style.display = 'flex';
+      adCont.style.display = 'none';
+      target.style.display = 'block';
+      gameOver = false;
+      startScore.innerText = score;
+      endScore.innerText = score;
+      adFrame.innerHTML = '';
+      closeBtn.style.display = 'none';
+    });
     
 });
 
-closeBtn.addEventListener('click', (e) => {
-    gameCont.style.display = 'flex';
-    adCont.style.display = 'none';
-    target.style.display = 'block';
-    gameOver = false;
-    startScore.innerText = score;
-    endScore.innerText = score;
-    adFrame.innerHTML = '';
-    closeBtn.style.display = 'none';
-});
